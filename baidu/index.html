@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+var scale = 1;
+if(window.devicePixelRatio){
+	scale = scale / window.devicePixelRatio;
+}
+document.write('<meta name="viewport" content="initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no" />');
+</script>
+	<title>百度一下</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+<script>
+toSize ();
+function toSize () {
+	var html = document.getElementsByTagName("html")[0];
+	var screenW = html.getBoundingClientRect().width; 
+	html.style.fontSize = screenW/16 + "px";
+}
+window.addEventListener(
+	"orientationchange",
+	function(){
+		toSize ();
+	},
+	false
+);
+window.addEventListener(
+	"resize",
+	function(){
+		toSize ();
+	},
+	false
+);
+</script>
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<a href="#"><img src="image/1.png"></a>
+			<a href="#" class="icon"></a>
+			<a href="#" class="icon1"></a>
+		</div>
+		<h1><img src="image/title.png"></h1>
+		<div class="search clear">
+			<input type="text" class="text">
+			<input type="button" class="button"  value="百度一下">
+		</div>
+		<nav class="nav clear">
+			<a href="#">蘑菇</a>
+			<a href="#">提莫</a>
+			<a href="#">蘑菇</a>
+			<a href="#">提莫</a>
+			<a href="#">蘑菇</a>
+			<a href="#">提莫</a>
+		</nav>
+	</header>
+	<section class="myNav">
+		<h2>我的导航<a href="#" class="dot"></a></h2>
+		<nav class="programa clear">
+			<a href="#">资讯</a>
+			<a href="#">hao123</a>
+			<a href="#">图片</a>
+			<a href="#">爱奇艺</a>
+			<a href="#">美女</a>
+			<a href="#">音乐</a>
+			<a href="#">笑话</a>
+			<a href="#" class="add"></a>
+		</nav>
+	</section>
+	<section class="hot">
+		<h2>实时热点<a href="#" class="dot"></a></h2>
+		<ul class="clear test">
+			<li><a href="#" class="line">940万考生赴高考</a></li>
+			<li><a href="#">940万考生赴高考</a></li>
+			<li><a href="#" class="line">940万考生赴高考</a></li>
+			<li><a href="#">940万考生赴高考</a></li>
+		</ul>
+		<div class="rank">
+			<a href="#">百度风云榜></a>
+		</div>
+	</section>
+	<section class="recommend">
+		<h2>百度推荐<a href="#" class="dot"></a></h2>
+	</section>
+</body>
+</html>
