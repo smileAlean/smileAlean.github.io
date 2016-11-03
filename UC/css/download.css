@@ -1,0 +1,341 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    font:12px Arial,"微软雅黑";
+    min-width: 990px;
+}
+h1,
+h2,
+h3,
+p ,
+dl,
+dd {
+    margin: 0;
+}
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #445;
+    text-decoration: none;
+}
+a:hover {
+    color: #f60;
+}
+img {
+    border:none;
+    vertical-align: top;
+}
+input {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+.clearFix:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+/* end reset.css*/
+#content {
+    background: #f2f2f2 url("../img/bg_cont.png") repeat-x top;
+    font-size: 14px;
+    color: #666;
+}
+.guide {
+    padding: 10px 5px;
+    line-height: 22px;
+}
+.content,
+.typeDownload,
+.otherDownload {
+    background: #fff;
+}
+#content h3 {
+    margin: 0 5px;
+    font: bold 14px/46px "宋体";
+    color: #666;
+}
+.platform {
+    width: 940px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+
+}
+.platformList {
+    margin-right: -40px;
+}
+.platformList li {
+    float: left;
+    margin-right: 48px;
+    width: 92px;
+    text-align: center;
+}
+.platformList .text {
+    display: inline-block;
+    line-height: 30px;
+}
+.platformList .ico {
+    display: block;
+    height: 80px;
+    background: url("../img/ico.png")no-repeat;
+    transition: 200ms;
+}
+.pc .ico {
+    background-position: -259px 16px;
+}
+.platformList li:hover .pc .ico {
+    background-position: -259px  -104px;
+}
+.android .ico {
+    background-position: 26px 16px;
+}
+.platformList li:hover .android .ico {
+    background-position: 26px  -104px;
+}
+.iPhone .ico {
+    background-position: -117px 16px;
+}
+.platformList li:hover .iPhone .ico {
+    background-position: -117px  -104px;
+}
+.iPad .ico {
+    background-position: -543px 16px;
+}
+.platformList li:hover .iPad .ico {
+    background-position: -543px  -104px;
+}
+.aPad .ico {
+    background-position: -400px 16px;
+}
+.platformList li:hover .aPad .ico {
+    background-position: -400px  -104px;
+}
+.TV .ico {
+    background-position: -685px 16px;
+}
+.platformList li:hover .TV .ico {
+    background-position: -685px  -104px;
+}
+.WP .ico {
+    background-position: -826px 16px;
+}
+.platformList li:hover .WP .ico {
+    background-position: -826px  -104px;
+}
+.system {
+    margin-top: 25px;
+    padding: 36px 0;
+    border-top: 1px solid #eee;
+    color: #eaeef5;
+}
+.system a,
+.system span {
+    float: left;
+}
+.system a {
+    margin-left: 18px;
+}
+.system a:hover {
+    color: #fff;
+    background: #f60;
+}
+
+.system span {
+    margin: 0  5px 2px 23px;
+}
+.space {
+    height: 15px;
+}
+.search {
+    float: right;
+    margin-right: 25px;
+    margin-top: 11px;
+    height: 30px;
+    width:284px;
+    position: relative;
+    line-height: 28px;
+}
+.inputText {
+    width: 240px;
+    height: 28px;
+    padding-left: 8px;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    top: 0;
+    left:0;
+    color: #999;
+}
+.inputBut {
+    width: 36px;
+    height: 30px;
+    background: #f60 url("../img/ico_search.png ") no-repeat center;
+    position: absolute;
+    top:0;
+    right: 0;
+    cursor: pointer;
+}
+.inputBut:hover {
+    background-color: #f80;
+}
+.downloadList {
+    padding: 20px 15px 0;
+}
+.downloadList li {
+    float: left;
+    width: 160px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 28px;
+}
+.chooseMore{
+   padding: 30px 0 20px;
+}
+
+.but {
+    margin: 0 auto;
+    padding: 15px 20px;
+    width: 180px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 -1px 0 #ea4900;
+    background: #f60;
+    cursor: pointer;
+}
+.but:hover {
+    background: #f80;
+}
+.but em {
+    display: inline-block;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/ico_mobile.png");
+    vertical-align: -4px;
+}
+.but span {
+    display: inline-block;
+}
+.otherTitle {
+    border-bottom: 1px solid #eee;
+}
+.feedBack {
+    float: right;
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 46px;
+}
+.feedBack a {
+    /*color: #0050b4;*/
+}
+.feedBack a:hover {
+    color: #f60;
+}
+.directD {
+    float: left;
+    width: 455px;
+    height: 252px;
+    padding: 15px;
+    border-right: 1px solid #eee;
+}
+.codeD {
+    float: right;
+    width: 474px;
+    padding: 15px;
+}
+.downloadTitle {
+    font-size: 12px;
+    line-height: 26px;
+}
+.caption {
+    margin-top: 18px;
+    font-size: 12px;
+    line-height:26px;
+    text-align: center;
+}
+.caption1 {
+    margin-top: 22px;
+    font-size: 12px;
+    line-height:26px;
+    text-align: center;
+}
+.assB,
+.assG {
+    margin: 8px auto;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+}
+.assB a {
+    display: block;
+    background: #6aa7df;
+    color: #fff;
+}
+.assB em,
+.assG em{
+    display:inline-block ;
+    width: 26px;
+    height: 28px;
+    background: url("../img/ico_pp_blue.png");
+    vertical-align: -10px;
+    margin-right: 3px;
+}
+
+.assB a:hover {
+    background: #75b0e7;
+}
+.assG a {
+    display: block;
+    background: #81b846;
+    color: #fff;
+}
+.assG a:hover {
+    background: #8ec355;
+}
+.codeD p {
+    font-size: 12px;
+    line-height: 20px;
+}
+.pic {
+    margin-top: 12px;
+    text-align: center;
+}
+.pic span {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.copyRight {
+    padding-top: 63px;
+    height: 41px;
+}
+.companyLogo {
+    float: left;
+    width: 118px;
+    height: 36px;
+}
+.copyPic {
+    float: right;
+    text-align: right;
+}
+.copyRight .text p{
+    text-align: left;
+    line-height: 20px;
+    color: #666;
+}

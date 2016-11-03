@@ -1,0 +1,292 @@
+@charset "utf-8";
+/*reset.css*/
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial, "\5B8B\4F53";
+    color: #666;
+    min-width: 950px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+dl,
+dd,
+h3 {
+    margin: 0;
+}
+em {
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: #f60;
+}
+.clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+/*end reset.css*/
+.wrap {
+    width: 950px;
+    margin:0 auto;
+}
+#header {
+    width:100%;
+    height: 74px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.logo {
+    float: left;
+    margin-top: 20px;
+    width: 326px;
+    height: 34px;
+    background: url("../img/aliuclogo.png")no-repeat;
+}
+#language {
+    float: right;
+    margin-top: 38px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.language {
+    position: relative;
+    float: left;
+    margin-right: 4px;
+    width: 113px;
+    height: 20px;
+    padding: 0 5px 0 10px;
+    border: 1px solid #dbdbdb;
+}
+.language em {
+    display: block;
+    float: right;
+    width:11px;
+    height: 20px;
+    background: url("../img/arrow.png") no-repeat;
+    background-position: -51px 0;
+}
+.language:hover .languageList {
+    display: block;
+
+}
+.languageList {
+    display: none;
+    position: absolute;
+    left: -1px;
+    top: 20px;
+    width: 128px;
+    border: 1px solid #dbdbdb;
+    background: rgba(255,255,255,.9);
+}
+.languageList li {
+    height: 26px;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 26px;
+}
+.languageList a {
+    color: #445;
+}
+.languageList li:hover {
+    background: #ebebeb;
+}
+.languageList li:hover a {
+    color: #f60;
+}
+#language span{
+    /*display: block;*/
+    margin: 0 12px;
+}
+.phone {
+    background: url("../img/lang_phone_icon.jpg") no-repeat 0 center;
+    padding-left: 15px;
+}
+.pad {
+    margin-left: 15px;
+    background: url("../img/icon_pad.png") no-repeat 0 center;
+    padding-left: 18px;
+}
+#nav {
+    height: 37px;
+    width: 100%;
+    border-bottom: 2px solid #f60;
+    box-shadow: 0 4px 1px #e9e9e9;
+}
+.share {
+    float: right;
+    margin-top: 8px;
+}
+.share a {
+    margin-left: 6px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
+.weibo,
+.qqweibo,
+.facebook,
+.twitte,
+.linkedin {
+    background: url("../img/share_icon.png")no-repeat;
+}
+.weibo {
+    background-position: 0 0;
+}
+.weibo:hover {
+    background-position: 0 bottom;
+}
+.qqweibo {
+    background-position: -22px 0;
+}
+.qqweibo:hover {
+    background-position: -22px bottom;
+}
+.facebook {
+    background-position: -44px 0;
+}
+.facebook:hover {
+    background-position: -44px bottom;
+}
+.twitte {
+    background-position: -66px 0;
+}
+.twitte:hover {
+    background-position: -66px bottom;
+}
+.linkedin {
+    background-position: right 0;
+}
+.linkedin:hover {
+    background-position: right bottom;
+}
+.topNav>li{
+    display: inline;
+    position: relative;
+    float: left;
+    height: 37px;
+    font-size: 14px;
+    line-height: 36px;
+    font-weight: bold;
+    padding: 0 31px;
+}
+.topNav li a {
+    color: #2d2b2b;
+}
+.topNav li:hover {
+   background-image: linear-gradient( rgb(254,17,1) 0,rgb( 249,103,6) 3px );
+}
+.topNav li:hover a {
+    color: #fff;
+}
+#nav .select a {
+    color: #f60;
+}
+#nav .select:hover a {
+    color: #fff;
+}
+.topNav .select:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -3.5px;
+    bottom: 0;
+    width: 7px;
+    height: 5px;
+    background: url("../img/navigation.jpg") ;
+}
+.topNav .select:hover:after {
+    display: none;
+}
+.dropList {
+    position: absolute;
+    left: 0;
+    top: 37px;
+    display: none;
+    background: rgba(255,125,38,.95);
+    z-index: 4;
+}
+.dropList li {
+    width: 118px;
+    height: 31px;
+    text-indent: 14px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 32px;
+}
+.dropList a {
+    color: #fff;
+}
+.dropList li:hover {
+    background: #f60;
+}
+.topNav li:hover .dropList {
+    display: block;
+}
+.subNav {
+    float: right;
+    padding: 18px 0;
+}
+.subNav a {
+    margin-left: 15px;
+}
+.subNav .select {
+    color: #f60;
+}
+#webMap {
+    height: 215px;
+    border-top: 1px solid #ededed;
+    margin-top: 25px;
+}
+.webMap {
+    position: relative;
+}
+.webIco {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background: url("../img/web_map_btn.png")no-repeat;
+    width: 93px;
+    height: 23px;
+}
+.webMap dl {
+    float: left;
+    width:12.3%;
+    margin: 15px 0;
+}
+.webMap dt {
+    height: 28px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #999;
+}
+.webMap dd {
+    line-height: 22px;
+}
+.webMap a {
+    color: #999;
+}
+.webMap a:hover {
+    color: #f60;
+}
+#footer {
+    text-align: center;
+    background: #d6d6d6;
+}
+.footer {
+    padding: 25px 0 17px;
+}
+.footer p {
+    line-height:22px;
+    color:#666 ;
+}

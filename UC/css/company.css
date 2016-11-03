@@ -1,0 +1,55 @@
+@charset "utf-8";
+.imgLink {
+    margin-top: 30px;
+}
+.imgLink a {
+    display: block;
+    float: left;
+    width: 237px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 210px;
+    background: url(../img/corp_img_link.jpg) no-repeat;
+}
+.imgLink .dynamic {
+    background-position: -237px 0;
+}
+.imgLink .management {
+    background-position: -474px 0;
+}
+.imgLink .culture {
+    width: 239px;
+    background-position: -711px 0;
+}
+.imgLink .honor {
+    background-position: 0 -210px;
+}
+.imgLink .report {
+    background-position: -474px -210px;
+}
+.imgLink .mascot {
+    width: 239px;
+    background-position: -710px -210px;
+    background-size: 948px 870px;
+}
+.survey:hover {
+    background-position: 0 -450px;
+}
+.imgLink .dynamic:hover {
+    background-position: -237px -450px;
+}
+.imgLink .management:hover {
+    background-position: -474px -450px;
+}
+.imgLink .culture:hover {
+    background-position: -711px -450px;
+}
+.imgLink .honor:hover {
+    background-position: 0 -660px;
+}
+.imgLink .report:hover {
+    background-position: -474px -660px;
+}
+.imgLink .mascot:hover {
+    background-position: -710px -660px;
+}

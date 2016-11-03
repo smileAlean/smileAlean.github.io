@@ -1,0 +1,448 @@
+@charset "utf-8";
+/*reset.css*/
+body {
+    margin: 0;
+    font:12px Arial,"微软雅黑";
+    min-width: 990px;
+}
+h1,
+h2,
+h3,
+p,
+dl,
+dd{
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #445;
+    text-decoration: none;
+}
+a:hover {
+    color: #f60;
+}
+img {
+    border:none;
+    vertical-align: top;
+}
+.clearFix:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+/* end reset.css*/
+.wrap {
+    width: 990px;
+    margin: 0 auto;
+}
+.massageShow {
+    position: relative;
+    height: 400px;
+    z-index: 1;
+}
+
+.bannerL {
+    position: absolute;
+    left: 0;
+    top:0 ;
+    width: 50%;
+    height: 400px;
+    background: #335bc0;
+    z-index: 1;
+}
+.bannerR {
+    position: absolute;
+    right: 0;
+    top:0 ;
+    width: 50%;
+    height: 400px;
+    background: #3961c4;
+
+}
+.elder {
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.banner {
+    display: block;
+    height: 400px;
+    background: url("../img/brand.jpg")no-repeat center 0;
+}
+.AndroidD,
+.iPhoneD,
+.AndroidD:hover,
+.iPhoneD:hover{
+    background: url("../img/btn_brand.png") no-repeat;
+}
+.AndroidD {
+    display:inline-block;
+    margin: 0 49px 0 40px;
+    width: 182px;
+    height: 53px;
+    background-position: -1px 0;
+}
+.iPhoneD {
+    display:inline-block;
+    margin: 0 49px 0 40px;
+    width: 182px;
+    height: 53px;
+    background-position: right 0;
+}
+.AndroidD:hover {
+    background-position: left bottom;
+}
+.iPhoneD:hover {
+    background-position: right bottom ;
+}
+.elder .wrap{
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    height: 53px;
+    margin-left: -495px;
+    text-align: center;
+}
+.dot {
+    position: absolute;
+    margin-left: -495px;
+    left: 50%;
+    bottom:10px;
+    width: 990px;
+    height: 18px;
+    text-align: center;
+    z-index: 5;
+}
+.dot .sel {
+    display:inline-block;
+    margin: 0 4px;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("../img/scroll_dot_cur.png") no-repeat ;
+}
+.dot .unSel {
+    display:inline-block;
+    margin: 0 4px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background: url("../img/scroll_dot.png") no-repeat;
+}
+#plat {
+     height: 145px;
+    border-bottom: 1px solid #eee;
+}
+.plat {
+    position: relative;
+}
+.downloadList {
+    float: left;
+}
+.downloadList li {
+    float: left;
+    margin: 5px 13px 0;
+    width: 112px;
+    height: 135px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.android {
+    display: block;
+
+}
+.ico {
+    display: block;
+    background: url("../img/ico.png") no-repeat;
+    padding-top: 10px;
+    height: 70px;
+    cursor: pointer;
+    -webkit-transition:200ms;
+    -moz-transition:200ms;
+    transition:200ms;
+}
+
+.android .ico {
+    background-position: 38px 16px;
+}
+.text {
+    display: block;
+    line-height: 28px;
+    text-align: center;
+    color: #445;
+}
+.round {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 112px;
+    height: 112px;
+    background: url("../img/round.png") no-repeat;
+}
+.download {
+    display: none;
+    line-height: 28px;
+    text-align: center;
+}
+.update {
+    display: none;
+    line-height: 22px;
+    margin-top: 4px;
+}
+.android .newIco {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    width: 23px;
+    height: 11px;
+    background: url("../img/ico_new.png")no-repeat;
+}
+.downloadList li:hover .android .ico {
+    background-position: 38px -104px;
+}
+.downloadList li:hover .text {
+    display: none;
+
+}
+.downloadList li:hover .round,
+.downloadList li:hover .download,
+.downloadList li:hover .update {
+    display: block;
+}
+.iphone .ico {
+    background-position: -105px 16px;
+}
+.downloadList li:hover .iphone .ico {
+    background-position: -105px -104px;
+}
+.pc .ico {
+    background-position: -249px 16px;
+}
+.downloadList li:hover .pc .ico {
+    background-position: -249px -104px;
+}
+.pad .ico {
+    background-position: -941px 16px;
+}
+.in {
+    position: absolute;
+    top: 26px;
+    left: 15px;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #f60;
+    border-radius: 3px;
+    color: #f60;
+    text-align: center;
+    display: none;
+}
+.in1 {
+    position: absolute;
+    top: 62px;
+    left: 15px;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #f60;
+    color: #f60;
+    border-radius: 3px;
+    text-align: center;
+    display: none;
+}
+.downloadList li:hover .pad .ico {
+    background-position: -941px -104px;
+}
+.downloadList li:hover .in,
+.downloadList li:hover .in1{
+    display: block;
+    z-index: 10;
+}
+.pad .ico .in:hover,
+.pad .ico .in1:hover{
+    background: #f60;
+    color:#fff;
+}
+.pad .update {
+    margin-top: 29px;
+}
+.tv .ico {
+    background-position: -675px 16px;
+}
+.downloadList li:hover .tv .ico {
+    background-position: -675px -104px;
+}
+.wp .ico {
+    background-position: -819px 16px;
+}
+.downloadList li:hover  .wp .ico {
+    background-position: -819px -104px;
+}
+.code {
+    width: 128px;
+    height: 160px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top:-32px;
+    right: 0;
+    z-index: 5;
+}
+.news {
+    margin-right:-58px;
+}
+.new {
+    padding: 35px 0 ;
+    float: left;
+    margin-right: 58px;
+    width: 290px;
+
+}
+.new dt {
+    height: 30px;
+}
+
+.subTitle {
+    float: left;
+    font: 20px/30px "微软雅黑";
+}
+.more {
+    position: relative;
+    float: right;
+    width: 40px;
+    display: inline-block;
+    padding-top: 5px;
+    font:12px/24px "微软雅黑";
+}
+.more span {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 2px;
+    background: url("../img/arrow.png")no-repeat;
+    background-position: -33px 0;
+    width: 5px;
+    height: 15px;
+}
+.more:hover span {
+    background-position: -13px 0;
+}
+.pic {
+    margin: 16px 0 11px;
+}
+.pic a:hover span {
+    color: #f60;
+}
+.pic span {
+    display: inline-block;
+    width: 290px;
+    height: 34px;
+    font: 14px/36px "微软雅黑";
+    color: #445;
+    text-align: center;
+    background: #f2f2f2;
+}
+.textList li {
+    font: 14px/26px "微软雅黑";
+}
+.link {
+    position: relative;
+    margin-top: 20px;
+    border-top: 1px dotted #565656;
+    border-bottom: 1px dotted #565656;
+}
+.navLink {
+    color: #666;
+    padding: 9px 0 9px 10px;
+    line-height: 20px;
+    height: 19px;
+    overflow: hidden;
+}
+.navLink a ,
+.navLink span {
+    float: left;
+}
+.navLink a {
+    margin: 0 7px;
+}
+.navLink1 {
+    /*display: none;*/
+    width: 930px;
+    margin-top: -5px;
+    padding: 0 0 8px 8px;
+    color: #666;
+    line-height: 20px;
+}
+.navLink1 a,
+.navLink1 span {
+    float: left;
+}
+.navLink1 a {
+    margin: 0 7px;
+}
+.arrowsUp {
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    width:16px;
+    height: 16px;
+    background: url("../img/arrowsud.png")no-repeat left 0;
+    cursor: pointer;
+}
+
+.arrowsDown {
+    /*display: none;*/
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    width:16px;
+    height: 16px;
+    background: url("../img/arrowsud.png")no-repeat right 0;
+    cursor: pointer;
+}
+.friendlyLink {
+    margin-bottom: 20px;
+    border-bottom: 1px #565656 dotted;
+    position: relative;
+}
+.companyLogo {
+    float: left;
+    margin-top: 22px;
+    width: 118px;
+    height: 36px;
+}
+.copyRight .text {
+    padding-top: 7px;
+    margin-left: 132px;
+}
+.copyRight .text p{
+    text-align: left;
+    line-height: 19px;
+    color: #666;
+}
+.copyPic {
+    float: right;
+    margin-right: -5px;
+    text-align: right;
+}
+.copyPic img {
+    margin-right: 5px;
+}
+.copyPic .sec{
+    margin-top: 6px;
+}
+
+
+

@@ -1,0 +1,287 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    font:12px Arial,"微软雅黑";
+    min-width: 990px;
+}
+h1,
+h2,
+h3,
+p ,
+dl,
+dd {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #445;
+    text-decoration: none;
+}
+a:hover {
+    color: #f60;
+}
+img {
+    border:none;
+    vertical-align: top;
+}
+.clearFix:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+/* end reset.css*/
+#header {
+    width: 100%;
+    height: 70px;
+
+}
+.wrap {
+    width: 990px;
+    margin: 0 auto;
+}
+.header .logo{
+    float: left;
+    margin-top: 10px;
+}
+.header img {
+    vertical-align: middle;
+}
+.nav {
+    width: 650px;
+    float: right;
+}
+
+.nav>li {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 67px;
+    margin: 0 16px;
+    font: 20px/70px Arial,"微软雅黑","宋体";
+    text-align: center;
+
+}
+.select {
+    border-bottom: 3px solid #f60;
+}
+.nav li:hover .subNav {
+    display: block;
+}
+.subNav {
+    position: absolute;
+    left: 50%;
+    margin-left: -72px;
+    width: 142px;
+    border: 2px solid rgba(230,230,230,.95);
+    background: rgba(255,255,255,.95);
+    display: none;
+    z-index:4;
+
+}
+.subNav>li {
+    font-size: 12px;
+    line-height: 34px;
+    text-align: center;
+}
+.subNav>li:hover {
+    background:#ebebeb;
+}
+.subNav:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    margin-left: -10px;
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: url("../img/ico_down_arrow.png") no-repeat;
+}
+#footer {
+    padding: 25px 0 40px;
+    font-size: 12px;
+    color: #666;
+    background: #333;
+}
+#footer .wrap {
+    font-family: Arial, "微软雅黑", "宋体", Impoct;
+}
+#footer a {
+    color: #666;
+}
+#footer a:hover {
+    color: #f60;
+}
+
+.newList dl,
+.newList .rests {
+    float: left;
+    width: 165px;
+}
+.newList dl dt {
+    font-weight: bold;
+    line-height: 22px;
+}
+.newList dd{
+    line-height: 19px;
+}
+.language {
+    height: 36px;
+    position: relative;
+}
+.languageP {
+    display: block;
+    padding: 3px 4px;
+    width: 128px;
+    height: 16px;
+    font-size: 14px;
+    border: 1px solid #434343;
+    cursor: pointer;
+    background: url("../img/ico_lang_arrow.png") no-repeat right center;
+}
+em,
+.site span {
+    background: url("../img/icon.png")no-repeat;
+}
+.languageP em {
+    float: left;
+    display: block;
+    width: 24px;
+    height: 16px;
+    background-position:0 0px;
+}
+.languageP span{
+    display: block;
+    margin-left: 24px;
+    line-height: 16px;
+    height: 16px;
+}
+.languageList {
+    width: 130px;
+    padding: 10px 0;
+    border:1px solid #e0e0e0;
+    box-shadow: 0 0 2px #e0e0e0;
+    background: rgba(255,255,255,.95);
+    position: absolute;
+    left: 0;
+    bottom: 42px;
+    display: none;
+}
+.languageList li {
+    padding-left: 12px;
+    line-height: 28px;
+    height: 28px;
+}
+.languageList li a {
+    color: #445;
+    display: block;
+}
+.languageList li:hover {
+    background:#ebebeb;
+}
+.languageList:after {
+    content: '';
+    width: 9px;
+    height: 6px;
+    position: absolute;
+    left: 12px;
+    bottom: -6px;
+    background: url("../img/ico_lang_arrow2.png");
+}
+.language:hover .languageList{
+    display: block;
+}
+.site {
+    height:26px;
+    font-size: 14px;
+    line-height: 26px;
+    padding-left: 7px;
+    position: relative;
+}
+.site span {
+    display: inline-block;
+    width: 24px;
+    height: 26px;
+    vertical-align: middle;
+}
+.site .mobile span {
+    background-position: -2px -23px;
+}
+.site:hover .mobile span {
+    background-position: right -23px;
+}
+.site .pad span {
+    background-position: -2px -120px;
+}
+.site:hover .pad span {
+    background-position: right -120px;
+}
+.site .tv span {
+    background-position: -2px -152px;
+}
+.site:hover .tv span {
+    background-position: right -152px;
+}
+.site .weibo span {
+    background-position: -2px -53px;
+}
+.site:hover .weibo span {
+    background-position: right -53px;
+}
+.site .baidu span {
+    background-position: -2px -83px;
+}
+.site:hover .baidu span {
+    background-position: right -83px;
+}
+.site .weixin span {
+    background-position: -2px bottom;
+}
+.site:hover .weixin span {
+    background-position: right bottom;
+}
+#towCode {
+    position: relative;
+}
+.codeList li {
+    float: left;
+    width: 148px;
+    margin: 0 7px;
+    text-align: center;
+}
+.codeList {
+    position: absolute;
+    padding: 16px 8px;
+    width: 324px;
+    height: 170px;
+    right: 44px;
+    bottom: 28px;
+    background: #fff;
+    border:1px solid #e0e0e0;
+    box-shadow: 0 0 2px #e0e0e0;
+    display: none;
+}
+.codeList:after {
+    content: '';
+    width: 9px;
+    height: 6px;
+    position: absolute;
+    right: 10px;
+    bottom: -6px;
+    background: url("../img/ico_lang_arrow2.png");
+}
+.codeList P {
+    margin-top: 10px ;
+    line-height:12px;
+}
+#towCode:hover .codeList{
+    display: block;
+}
+

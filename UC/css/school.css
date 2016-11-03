@@ -1,0 +1,240 @@
+@charset "utf-8";
+/*reset.css*/
+body {
+    margin: 0;
+    font-family: 'Microsoft YaHei',arial,'\5B8B\4F53';
+    min-width: 998px;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+ul,
+ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+/*end reset.css*/
+.wrap {
+    width: 998px;
+    margin: 0 auto;
+}
+#header {
+    height: 600px;
+    background: url(../img/banner.jpg) no-repeat center;
+}
+.header {
+    height: 600px;
+    margin: auto;
+    background: url(../img/main.png) no-repeat center 30px ;
+
+}
+.nav {
+    width: 810px;
+    height: 36px;
+    position: fixed;
+    left: 50%;
+    margin-left: -405px;
+    z-index: 5;
+}
+.nav li {
+    float: left;
+    height: 35px;
+    margin: 0 40px;
+    text-align: center;
+}
+.nav a{
+    display: block;
+    height: 31px;
+    margin-top: 5px;
+    padding: 0;
+    font: 700 16px/31px 'Microsoft YaHei','黑体';
+    color:#333 ;
+}
+ a:hover {
+    color: #4394ce;
+}
+.nav .sel {
+    margin-top: 0;
+    border-top: 5px #f95a3b solid;
+    color: #f95a3b;
+}
+.nav .index {
+    margin: 0;
+}
+.nav .back {
+    display:inline-block;
+    width: 84px;
+    height: 36px;
+    margin: 5px 10px;
+    background: url("../img/ico_sprit.png")no-repeat  10px 0 ;
+    color: rgb(51, 51, 51);
+}
+.header .text {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    margin-left: -420px;
+    width: 245px;
+    height: 23px;
+    background: url("../img/ico_sprit.png")no-repeat 0 -43px ;
+}
+.btn {
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 70px;
+    left: 50%;
+    top: 435px;
+    margin-left: -155px;
+    cursor: pointer;
+}
+.intro {
+    margin-top: 22px;
+    text-align: center;
+    color: #333;
+}
+.theme {
+    width: 350px;
+    height: 75px;
+    margin: auto;
+    background: url("../img/ico_sprit.png") no-repeat 0 -384px ;
+}
+.intro p {
+    font: 16px/28px "微软雅黑";
+    color: #333;
+}
+.intro .line {
+    position: relative;
+    width: 380px;
+    height: 10px;
+    margin: auto;
+    margin-top: 15px;
+    border-top: 1px #4394ce solid;
+}
+.intro .line span {
+    position: absolute;
+    top: -3px;
+    left: 49%;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #4394ce;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.intro .text {
+    margin-top: 38px;
+    padding-bottom: 70px;
+    font: bold 16px/20px 'Microsoft YaHei','黑体';
+}
+
+.title {
+    position: relative;
+    height: 12px;
+    margin-top: 12px;
+    border-top: 1px #4394ce solid;
+}
+.title:before {
+    content: '';
+    position: absolute;
+    top:-1px;
+    left: 0;
+    width:100%;
+    height: 1px;
+    background: -webkit-gradient(linear,50% 50%,100% 50%,from(rgba(67,148,206,1)),to(rgba(206,67,198,1)));
+}
+.title h3 {
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    display: block;
+    color: rgb(67, 148, 206);
+    padding: 0 10px;
+    font: 700 24px/26px '微软雅黑';
+    background: #fff;
+}
+
+.main {
+    margin: 30px 36px 40px;
+}
+.mainText {
+    float: left;
+    width: 311px;
+}
+.mainText h4 {
+    font: bold 18px/24px "微软雅黑";
+    color: #333;
+    margin-bottom: 9px;
+}
+.mainText p {
+    font: 16px/27px "微软雅黑";
+    color: #333;
+    margin-bottom: 25px;
+}
+.mainText span {
+    font-weight: bold;
+    color: #ff795f;
+}
+.mainText .apply {
+    display: block;
+    width: 223px;
+    height: 42px;
+    background: url(../img/ico_sprit.png) 0 -493px no-repeat;
+}
+.mainImg {
+    float: right;
+    width: 570px;
+    height: 280px;
+}
+.process {
+    position: relative;
+    width: 913px;
+    height: 423px;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.process a {
+    position: absolute;
+    top: 206px;
+    left: 26px;
+    display: block;
+    width: 126px;
+    height: 39px;
+    line-height: 39px;
+}
+.list {
+    width: 928px;
+    margin: 38px auto 50px;
+    font: 14px/22px "微软雅黑";
+    color: #333;
+}
+.list li {
+    padding-bottom: 10px;
+}
+.list li a {
+    font: bold 14px/22px "微软雅黑";
+    color: #ff795f;
+}
+#footer {
+    height: 141px;
+    background: url(../img/footerbg.png) no-repeat center;
+    margin-top: 80px;
+}
