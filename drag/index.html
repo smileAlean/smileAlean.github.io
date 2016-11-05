@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			#box2{
+				top:300px;
+				background: blue;
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="box" class="box"></div>
+		<div id="box2" class="box"></div>
+		<script type="text/javascript">
+			//拖拽功能
+			function Drag(element){
+				this.element = element;
+				this.init();
+				this.disX = 0;
+				this.disY = 0;
+			};
+			Drag.prototype.init = function(){
+				var _this = this;
+				this.element.onmousedown = function(ev){
+					_this.downFn(ev);
+					ev.preventDefault();
+				};
+			};
+			Drag.prototype.downFn = function (ev){
+				// this -> element
+				this.disX = ev.clientX - this.element.offsetLeft;
+				this.disY = ev.clientY - this.element.offsetTop;
+				var _this = this;
+				document.onmousemove = function (ev){
+					_this.moveFn(ev);
+				};
+				document.onmouseup = this.upFn;
+			};
+
+			Drag.prototype.moveFn = function(ev){
+				this.element.style.left = ev.clientX - this.disX +"px";
+				this.element.style.top = ev.clientY - this.disY +'px';
+			};
+			Drag.prototype.upFn = function(){
+				document.onmousemove = document.onmouseup = null;
+			};
+
+			//有范围拖拽
+			function DragRange(element){
+				Drag.call(this,element);
+			};
+			for(var attr in Drag.prototype){
+				if (Drag.prototype.hasOwnProperty(attr)) {
+					DragRange.prototype[attr] = Drag.prototype[attr];
+				};
+			};
+			DragRange.prototype.moveFn = function(ev){
+				var l = ev.clientX - this.disX;
+				var t = ev.clientY - this.disY;
+				if (l<0) l = 0;
+				if (t<0) t = 0;
+				if (l>document.documentElement.clientWidth) {
+					l = document.documentElement.clientWidth - this.element.offsetWidth;
+				};
+				if (t>document.documentElement.clientHeight - this.element.offsetHeight) {
+					t = document.documentElement.clientHeight - this.element.offsetHeight;
+				};
+				this.element.style.left = l+'px';
+				this.element.style.top = t +'px';
+			}
+			var box = document.getElementById('box');
+			var box2 = document.getElementById('box2');
+			new Drag(box);
+			new DragRange(box2);
+			// new Drag(box);
+		</script>
+	</body>
+</html>
