@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border: none;
+			vertical-align: top;
+		}
+		#phoneBox{
+			position: relative;
+			width: 287px;
+			height: 587px;
+			background: url(img/iphone.jpg) no-repeat;
+		}
+		#content{
+			position: absolute;
+			left: 24px;
+			top: 82px;
+			width: 237px;
+			height: 419px;
+			border: 3px solid #000;
+			background: #fff;
+			overflow: auto;
+		}
+		#list{
+			position: absolute;
+			bottom: 83px;
+			left: 27px;
+			width: 237px;
+			background: #f7f7f7;
+		}
+		#imgs{
+			margin:5px 3px 0;
+		}
+		#text{
+			width: 139px;
+			height: 34px;
+			border: 1px solid #ded6e7;
+			border-radius: 5px;
+			font-size:16px;
+			outline: none;
+		}
+		#send{
+			font-size: 22px;
+			color: #ccc;
+			border:none;
+			outline: none;
+			background: #f7f7f7;
+		}
+		.left{
+			width: 237px;
+			float: left;
+			margin: 10px 0 5px;
+		}
+		#one{
+			float: left;
+		}
+		.right{
+			width: 237px;
+			float: right;
+			margin: 5px 0;
+		}
+		#two{
+			float: right;
+		}
+		.text1{
+			max-width: 200px;
+			background: pink;
+			word-break:break-all;
+			display:inline-block;
+			margin-top: 5px;
+			margin-bottom: 15px;
+		}
+		.text2{
+			max-width: 200px;
+			background: green;
+			word-break:break-all;
+			display:inline-block;
+			margin-top: 5px;
+			margin-bottom: 15px;
+			float:right;
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		var imgs = $('#imgs');
+		var send = $('#send');
+		var text = $('#text');
+		var content = $('#content');
+		var n = 1;
+		imgs.on('click',function(){
+			n++;
+			if (n>3) {
+				n=1;
+			}
+			$(this).attr('src','img/tu'+n+'.jpg');
+		})
+		send.on('click',function(){
+			if (text.val().trim() === "") {
+				alert('error');
+			}else{
+				if (n>1) {
+					content.html($("#content").html()+'<p class="left"><img src="img/tu'+n+'.jpg" id="one"><span class="text1">'+':'+text.val()+'</span></p>');
+				}else{
+					content.html($("#content").html()+'<p class="right"><img src="img/tu1.jpg" id="two"><span class="text2">'+':'+text.val()+'</span></p>')
+				}
+			}
+		})
+	}
+	</script>
+</head>
+<body>
+	<div id="phoneBox">
+		<div id="content">
+			<!-- <p class="left">
+				<img src="img/tu1.jpg" id="one">
+				<span class="text1">111</span>
+			</p>
+			<p class="right">
+				<img src="img/tu2.jpg" id="two">
+				<span class="text2">11111111111111111</span>
+			</p>
+			<p class="left">
+				<img src="img/tu3.jpg" id="one">
+				<span class="text1">11111111111111111</span>
+			</p> -->
+		</div>
+		<div id="list">
+			<img src="img/tu1.jpg" id="imgs">
+			<input type="text" id="text">
+			<input type="button" id="send" value="发送">
+		</div>
+	</div>
+</body>
+</html>
