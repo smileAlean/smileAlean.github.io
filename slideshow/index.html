@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				font-size: 50px;
+				color:black;
+			}
+			#box{
+				width:380px;
+				height:310px;
+				border:1px solid #000;
+				position: relative;
+				margin:0 auto;
+				overflow: hidden;
+			}
+			#box ul{
+				position: absolute;
+				left:0;
+			}
+			#prev{
+				position: absolute;
+				right:0;
+				top:120px;
+			}
+			#next{
+				position: absolute;
+				left:0;
+				top:120px;
+			}
+			#box ul li {
+				width:380px;
+				height:380px;
+				margin-right:10px;
+				float: left;
+				text-align: center;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		</style>
+		<script type="text/javascript" src=js/MTween3.js></script>
+		<script>
+			window.onload = function(){
+				var box = document.getElementById("box");
+				var oInput = document.getElementById("btn");
+				var oUl = box.getElementsByTagName('ul')[0];
+				var allLi = oUl.getElementsByTagName('li');
+				var oneWidth = allLi[0].offsetWidth + 10;
+				var allA = box.getElementsByTagName('a');
+				var num = 3;
+				var n = 1;
+				var timer = null;
+				function getWidth(){	
+					oUl.style.width =allLi.length*oneWidth +'px';
+				}
+				getWidth();
+				allA[0].onclick = function(){
+					if (this.statues) {
+						this.statues = false;
+						for( var i = 0; i < num; i++ ){
+							var oLi = allLi[i].cloneNode(true);
+							oUl.appendChild(oLi);
+							getWidth();
+						};
+						MTween(oUl,{left:-num*oneWidth},16,'linear',function(){
+								for( var i = 0; i < num; i++ ){
+									oUl.removeChild(allLi[0]);
+									oUl.style.left = 0;
+								};
+								allA[0].statues = true;
+						})
+					}
+				};
+				allA[1].onclick = function(){
+					if (this.statues) {
+						this.statues = false;
+						for( var i = 0; i < n; i++ ){
+							var oLi = allLi[i].cloneNode(true);
+							oUl.appendChild(oLi);
+							getWidth();
+						};
+						MTween(oUl,{left:-n*oneWidth},16,'linear',function(){
+								for( var i = 0; i < n; i++ ){
+									oUl.removeChild(allLi[0]);
+									oUl.style.left = 0;
+								};
+								allA[1].statues = true;
+						})
+					}
+
+				}
+				run();
+				function run(){
+					timer = setInterval(function(){
+						for( var i = 0; i < n; i++ ){
+							var oLi = allLi[i].cloneNode(true);
+							oUl.appendChild(oLi);
+							getWidth();
+						};
+						MTween(oUl,{left:-n*oneWidth},16,'linear',function(){
+								for( var i = 0; i < n; i++ ){
+									oUl.removeChild(allLi[0]);
+									oUl.style.left = 0;
+								};
+						})
+					},1000)  
+				}
+				for( var i = 0; i < allA.length; i++ ){
+					allA[i].statues = true;
+					allA[i].onmouseover = function(){
+						clearInterval(timer);
+						this.style.background = 'blue';
+					}
+					allA[i].onmouseout = function(){
+						run();
+						this.style.background = '';
+					}
+				}
+
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- <input type="button" value="切换" id="btn"> -->
+		<div id="box">
+			<ul>
+				<li>壹<img src="imgs/1_1.jpg"></li>
+				<li>贰<img src="imgs/1_2.jpg"></li>
+				<li>弎<img src="imgs/1_3.jpg"></li>
+				<li>肆<img src="imgs/1_4.jpg"></li>
+			</ul>
+			<a href="javascript:;" id="next"> < </a>
+			<a href="javascript:;" id="prev"> > </a>
+		</div>
+	</body>
+</html>
