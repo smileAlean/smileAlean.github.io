@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="myApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			table{
+				width:300px;
+				margin-top: 10px;
+				border-collapse:collapse;
+				text-align: center;
+			}
+			th{
+				cursor:pointer;
+			}
+			th,td{
+				padding:0;
+			}
+		</style>
+		<script src="angular.min.js"></script>
+		<script>
+			//模板
+			var m1 = angular.module('myApp', []);
+			//控制器
+			m1.controller('Aaa', ['$scope','$filter',function($scope,$filter) {
+				var oriArr = [
+					{name:'momo',age:'20'},
+					{name:'leo',age:'30'},
+					{name:'toto',age:'10'},
+					{name:'gg',age:'50'}
+				];
+				$scope.dataList = oriArr;
+				//排序
+				$scope.fnSort = function(arg){
+					// 函数内置的取反
+					arguments.callee['fnSort'+arg] = !arguments.callee['fnSort'+arg];
+					//过滤。取反
+					$scope.dataList = $filter('orderBy')($scope.dataList,arg,arguments.callee["fnSort"+arg]);
+				};
+				$scope.fnFilter = function(){
+					//过滤。筛选
+					$scope.dataList = $filter('filter')(oriArr,$scope.filterVal)
+				}
+			}])
+		</script>
+	</head>
+
+	<body>
+		<div ng-controller="Aaa">
+			<input type="text" ng-model="filterVal"><input type="button" ng-click="fnFilter()" value="搜索">
+			<table border="1">
+		    	<tr>
+		        	<th ng-click="fnSort('name')">姓名</th>
+		            <th ng-click="fnSort('age')">年龄</th>
+		        </tr>
+		        <tr ng-repeat="data in dataList">
+		        	<td>{{ data.name }}</td>
+		            <td>{{ data.age }}</td>
+		        </tr>
+		    </table>
+		</div>
+	</body>
+</html>

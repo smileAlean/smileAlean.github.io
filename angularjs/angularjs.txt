@@ -1,0 +1,7 @@
+   angularjs:
+	      ¹ýÂË£ºcurrency:''
+	      ng-model/ng-click
+	      $timeout/$watch
+	      angular.module('',[])
+	      angular.bind()/angular.copy()
+	      angular.extend()

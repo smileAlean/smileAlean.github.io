@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script>
+			//商品价格
+			function Aaa($scope,$timeout){
+				$scope.phone = {
+					money:1000,
+					num: 1,
+					fre:10
+				}
+				$scope.sum = function(){
+					return $scope.phone.money*$scope.phone.num
+				};
+				$scope.$watch($scope.sum,function(newVal,oldVal){
+					$scope.phone.fre = newVal >= 1000 ?0:10
+				})
+			}
+		</script>
+	</head>
+
+	<body>
+		<div ng-controller="Aaa">
+			<p>价格:<input type="text" ng-model="phone.money"></p>
+			<p>个数:<input type="text" ng-model="phone.num"></p>
+			<p>费用:<span>{{sum() | currency:'￥'}}</span></p>
+			<p>邮费:<span>{{phone.fre | currency:'￥'}}</span></p>
+			<p>总价:<span>{{sum()+phone.fre | currency:'￥'}}</span></p>
+		</div>
+	</body>
+</html>

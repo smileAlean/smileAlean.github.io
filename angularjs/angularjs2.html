@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script src=angular.min.js></script>
+		<script>
+			//模块
+			var m1 = angular.module('myApp', [])
+			m1.controller('Aaa', ['$scope', function ($scope) {
+				$scope.name = 'hello';
+			}])
+			//点击获取模块
+			document.onclick = function(){
+				angular.bootstrap(document,['myApp'])
+			}
+		</script>
+	</head>
+
+	<body>
+		<div ng-controller="Aaa">
+			<p>{{name}}</p>
+		</div>
+	</body>
+</html>
